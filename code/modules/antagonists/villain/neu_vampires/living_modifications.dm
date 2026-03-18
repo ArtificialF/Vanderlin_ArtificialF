@@ -43,6 +43,8 @@
 	var/frenzy_chance_boost = 10
 	var/humanity = 7
 
+	var/tmp/yield_prompt_active = FALSE
+
 	var/potence_weapon_buff = 0
 	var/last_telepathy_use = 0
 

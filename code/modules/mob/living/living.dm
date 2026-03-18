@@ -1277,8 +1277,16 @@
 		return
 	if(stat)
 		return
-	if(!(alert(src, "Yield in surrender?",,"YES","NO") == "YES"))
+	if(yield_prompt_active)
 		return
+
+	yield_prompt_active = TRUE
+	var/choice = alert(src, "Yield in surrender?",,"YES","NO")
+	yield_prompt_active = FALSE
+
+	if(choice != "YES")
+		return
+
 	surrendering = 1
 
 	record_round_statistic(STATS_YIELDS)
