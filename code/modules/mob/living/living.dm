@@ -1281,7 +1281,7 @@
 		return
 
 	yield_prompt_active = TRUE
-	var/choice = alert(src, "Yield in surrender?",,"YES","NO")
+	var/choice = tgui_alert(src, "Yield in surrender?", "RAVOX", DEFAULT_INPUT_CHOICES, timeout = 10 SECONDS)
 	yield_prompt_active = FALSE
 
 	if(choice != "YES")
